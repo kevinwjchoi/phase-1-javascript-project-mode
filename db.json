@@ -1,0 +1,12 @@
+{
+    "dogs": [
+        {
+            "ID": "001",
+            "Name": "Bailey",
+            "Description": "Ran away on a wagon.",
+            "Location": "Fairfax",
+            "Prize $": "4",
+            "Image": ""
+        }
+    ]
+}
