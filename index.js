@@ -1,14 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("works");
     fetchDogs();
 })
 //GET Fetch
 
-function fetchDogs(){
+function fetchDogs(dogData){
     fetch("http://localhost:3000/dogs")
     .then(res => res.json())
-    .then(data => console.log(data));
+    .then(dogData => {
+        dogData.forEach((dog) => renderDogs(dog));
+    });
 };
+
+//Render Dog Function 
+function renderDogs(){
+    const dogCard = document.querySelector(".dog_card");
+    console.log(dogCard)
+}
 
 
 
