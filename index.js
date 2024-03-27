@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchDogs();
+
+
+//created an event listener "Submit"    
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e)=> {
+        console.log(e)
+
+    })
 })
 //GET Fetch
 
@@ -34,6 +42,7 @@ function renderDogs(dog){
     p1.textContent = dog.description;
     p2.textContent = dog.location;
     p3.textContent = dog.image;
+
 
 }
 
