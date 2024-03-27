@@ -2,12 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchDogs();
 
 
+    
 //created an event listener "Submit"    
-    const form = document.querySelector("form");
-    form.addEventListener("submit", (e)=> {
-        console.log(e)
+const form = document.querySelector("form");
+form.addEventListener("submit", (e)=> {
+    console.log(e)
 
     })
+//create submit button 
+const submitBtn = document.createElement('button');
+submitBtn.textContent = "Add a doggo";
+form.appendChild(submitBtn);
+
 })
 //GET Fetch
 
