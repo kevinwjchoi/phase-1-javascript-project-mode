@@ -18,6 +18,7 @@ function renderDogCard(dog){
     div.id = (`container_${dog.name}`);
     const foundBtn = document.createElement("button");
     foundBtn.classList = (".found_button");
+    
 
     //creating dog info 
     const h2 = document.createElement("h2");
@@ -46,6 +47,7 @@ function renderDogCard(dog){
     foundBtn.addEventListener("click", () => {
         const deletingNode = document.getElementById(`container_${dog.name}`);
         deletingNode.remove();
+        deleteDB(dog.id);
 
     })
     
@@ -94,7 +96,27 @@ document.addEventListener("DOMContentLoaded", () => {
     
 })
 
+//POST REQUEST 
+function fetchDB() {
+    fetch ("http://localhost:3000/dogs")
+    .then (res => res.json())
+    .then(dogData => {
+        dogData.forEach(dog => renderDogCard(dog))
+    })
+    
+};
+
 //DELETE Fetch
+function deleteDB(id){
+    fetch (`http://localhost:3000/dogs/${id}`,{
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(res => res.json())
+    .then((dog) => console.log(dog))
+}
 
 //Callback Functions 
 

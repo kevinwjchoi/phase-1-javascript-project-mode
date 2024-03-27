@@ -1,6 +1,7 @@
 {
   "dogs": [
     {
+      "id": "1",
       "name": "Bailey",
       "description": "Ran away on a wagon.",
       "location": "Fairfax",
@@ -8,6 +9,7 @@
       "image": ""
     },
     {
+      "id": "1",
       "name": "Zoey",
       "description": "Caught a bird",
       "location": "Manassass",
@@ -15,6 +17,7 @@
       "image": ""
     },
     {
+      "id": "1",
       "name": "Ari",
       "description": "Ate a bug",
       "location": "Ashburn",
@@ -22,6 +25,7 @@
       "image": ""
     },
     {
+      "id": "1",
       "name": "Mango",
       "description": "Barked at a person",
       "location": "Centreville",
@@ -29,6 +33,7 @@
       "image": ""
     },
     {
+      "id": "1",
       "name": "Louie",
       "description": "Ran into the bushes",
       "location": "Vienna",
@@ -36,6 +41,7 @@
       "image": ""
     },
     {
+      "id": "1",
       "name": "Benny",
       "description": "Peed on the floor",
       "location": "Springfield",
