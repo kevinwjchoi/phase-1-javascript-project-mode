@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 //GET Fetch
 
-function fetchDogs(dogData){
+function fetchDogs(){
     fetch("http://localhost:3000/dogs")
     .then(res => res.json())
     .then(dogData => {
@@ -12,9 +12,14 @@ function fetchDogs(dogData){
 };
 
 //Render Dog Function 
-function renderDogs(){
+function renderDogs(dog){
+    //created container for each dog 
     const dogCard = document.querySelector(".dog_card");
-    console.log(dogCard)
+    const dogContainer = document.createElement("div");
+    dogContainer.id = (`container${dog.name}`);
+    dogCard.appendChild(dogContainer);
+
+
 }
 
 
