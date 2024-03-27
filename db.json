@@ -6,7 +6,7 @@
       "description": "Ran away on a wagon.",
       "location": "Fairfax",
       "prize": "4",
-      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images"
+      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/bailey.png"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "description": "Caught a bird",
       "location": "Manassass",
       "prize": "5",
-      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images"
+      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/zoey.png"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "description": "Ate a bug",
       "location": "Ashburn",
       "prize": "1",
-      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images"
+      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/ari2.png"
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "description": "Barked at a person",
       "location": "Centreville",
       "prize": "4",
-      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images"
+      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/daisy.png"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "description": "Ran into the bushes",
       "location": "Vienna",
       "prize": "7",
-      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images"
+      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/louie.png"
     },
     {
       "id": "6",
@@ -46,23 +46,7 @@
       "description": "Peed on the floor",
       "location": "Springfield",
       "prize": "4",
-      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images"
-    },
-    {
-      "id": "134d",
-      "name": "",
-      "description": "",
-      "location": "",
-      "prize": "",
-      "image": ""
-    },
-    {
-      "id": "5797",
-      "name": "Kevin",
-      "description": "ran away",
-      "location": "nova",
-      "prize": "1",
-      "image": "1232133"
+      "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/benny.png"
     }
   ]
 }

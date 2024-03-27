@@ -14,6 +14,8 @@ function renderDogCard(dog){
     const main = document.querySelector('main');
     const div = document.createElement("div");
     const divCard = document.createElement("div");
+    const dogImg = document.createElement("img");
+    
     divCard.classList = (".dog_card");
     div.id = (`container_${dog.name}`);
     const foundBtn = document.createElement("button");
@@ -30,9 +32,15 @@ function renderDogCard(dog){
     const p1 = document.createElement("p1");
     p1.id = ("dog_location");
     p1.textContent = dog.location;
+    
+    dogImg.src = dog.image;
+    
+
 
     foundBtn.textContent = ("Found");
     p1.appendChild(foundBtn);
+    
+    
     
     //appending elements to DOM
     main.appendChild(divCard);
@@ -40,6 +48,7 @@ function renderDogCard(dog){
     div.appendChild(h2);
     div.appendChild(p);
     div.appendChild(p1);
+    div.appendChild(dogImg);
 
     //Adding "Click" eventListener 
     foundBtn.addEventListener("click", () => {
