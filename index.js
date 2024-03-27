@@ -24,7 +24,6 @@ form.addEventListener("submit", (e)=> {
     image: `${newImage}`
     }
 
-    })
 //create submit button 
 const submitBtn = document.createElement('button');
 submitBtn.textContent = "Add a doggo";
@@ -33,6 +32,9 @@ form.appendChild(submitBtn);
 
 //passes newDogObj as an argument into the create dog function
 createDog(newDogObj);
+
+})
+
 
 
 })
