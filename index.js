@@ -17,20 +17,18 @@ function renderDogCard(dog){
     divCard.classList = (".dog_card");
     div.id = (`container_${dog.name}`);
     const foundBtn = document.createElement("button");
-    foundBtn.classList = (".found_button");
+    foundBtn.classList = ("found_button");
     
 
     //creating dog info 
     const h2 = document.createElement("h2");
-    h2
     h2.textContent = dog.name;
 
     const p = document.createElement("p");
-    p
     p.textContent = dog.description;
 
     const p1 = document.createElement("p1");
-    p1.id = ("#dog_location");
+    p1.id = ("dog_location");
     p1.textContent = dog.location;
 
     foundBtn.textContent = ("Found");
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //Adding eventListener to Submit button 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        console.log(e);
 
     // create dog object 
     const newName = e.target[0].value;
@@ -97,14 +94,19 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 //POST REQUEST 
-function fetchDB() {
-    fetch ("http://localhost:3000/dogs")
-    .then (res => res.json())
-    .then(dogData => {
-        dogData.forEach(dog => renderDogCard(dog))
-    })
-    
-};
+function createDog(object){
+    fetch("http://localhost:3000/dogs", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(object)
+        })
+        .then(res => res.json())
+        .then(newData => renderDogCard(newData));
+        
+    }
 
 //DELETE Fetch
 function deleteDB(id){
