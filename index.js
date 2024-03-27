@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 //GET Fetch
 
+function fetchDogs(){
+    fetch("http://localhost:3000/dogs")
+    .then(res => res.json())
+    .then(data => console.log(data));
+};
+
 
 
 //DELETE Fetch
