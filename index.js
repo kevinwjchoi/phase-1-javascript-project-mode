@@ -118,7 +118,5 @@ function deleteDB(id){
     .then((dog) => console.log(dog))
 }
 
-//Callback Functions 
-
 //Mouseover EventListener 
 
