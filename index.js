@@ -9,6 +9,21 @@ form.addEventListener("submit", (e)=> {
     e.preventDefault();
     console.log(e)
 
+ // create dog object 
+ const newName = e.target[0].value;
+ const newDesc = e.target[1].value;
+ const newLocation = e.target[2].value;
+ const newPrize = e.target[3].value;
+ const newImage = e.target[4].value;
+
+ const newDogObj = {
+    name: `${newName}`,
+    description: `${newDesc}`,
+    location: `${newLocation}`,
+    prize: `${newPrize}`,
+    image: `${newImage}`
+    }
+
     })
 //create submit button 
 const submitBtn = document.createElement('button');
