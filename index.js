@@ -1,94 +1,98 @@
-document.addEventListener("DOMContentLoaded", () => {
-    fetchDogs();
-
-
-    
-//created an event listener "Submit"    
-const form = document.querySelector("form");
-form.addEventListener("submit", (e)=> {
-    e.preventDefault();
-    console.log(e)
-
- // create dog object 
- const newName = e.target[0].value;
- const newDesc = e.target[1].value;
- const newLocation = e.target[2].value;
- const newPrize = e.target[3].value;
- const newImage = e.target[4].value;
-
- const newDogObj = {
-    name: `${newName}`,
-    description: `${newDesc}`,
-    location: `${newLocation}`,
-    prize: `${newPrize}`,
-    image: `${newImage}`
-    }
-
-//create submit button 
-const submitBtn = document.createElement('button');
-submitBtn.textContent = "Add a doggo";
-form.appendChild(submitBtn);
-
-
-//passes newDogObj as an argument into the create dog function
-createDog(newDogObj);
-
-})
-
-
-
-})
 //GET Fetch
-
-function fetchDogs(){
-    fetch("http://localhost:3000/dogs")
-    .then(res => res.json())
+function fetchDB () {
+    fetch ("http://localhost:3000/dogs")
+    .then (res => res.json())
     .then(dogData => {
-        dogData.forEach((dog) => renderDogs(dog));
-    });
+        dogData.forEach(dog => renderDogCard(dog))
+    })
+    
 };
 
-//Render Dog Function 
-function renderDogs(dog){
-    //created container for each dog 
-    const dogCard = document.querySelector(".dog_card");
-    const dogContainer = document.createElement("div");
-    dogContainer.id = (`container${dog.name}`);
-    dogCard.appendChild(dogContainer);
+//Render Dog card
+function renderDogCard(dog){
+    //created main and span inside body tag 
+    const main = document.querySelector('main');
+    const div = document.createElement("div");
+    const divCard = document.createElement("div");
+    divCard.classList = (".dog_card");
+    div.id = (`container_${dog.name}`);
+    const foundBtn = document.createElement("button");
+    foundBtn.classList = (".found_button");
 
-    //creating html elements for each dog 
+    //creating dog info 
     const h2 = document.createElement("h2");
-    const p1 = document.createElement("p");
-    const p2 = document.createElement("p");
-    const p3 = document.createElement("p");
-
-    //appended to DOM 
-    dogContainer.appendChild(h2);
-    dogContainer.appendChild(p1);
-    dogContainer.appendChild(p2);
-    dogContainer.appendChild(p3);
+    h2
     h2.textContent = dog.name;
-    p1.textContent = dog.description;
-    p2.textContent = dog.location;
-    p3.textContent = dog.image;
 
+    const p = document.createElement("p");
+    p
+    p.textContent = dog.description;
 
+    const p1 = document.createElement("p1");
+    p1.id = ("#dog_location");
+    p1.textContent = dog.location;
+
+    foundBtn.textContent = ("Found");
+    p1.appendChild(foundBtn);
+    
+    //appending elements to DOM
+    main.appendChild(divCard);
+    divCard.appendChild(div);
+    div.appendChild(h2);
+    div.appendChild(p);
+    div.appendChild(p1);
+
+    //Adding "Click" eventListener 
+    foundBtn.addEventListener("click", () => {
+        const deletingNode = document.getElementById(`container_${dog.name}`);
+        deletingNode.remove();
+
+    })
+    
+    
 }
+//DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    //when DOM is loaded, invoke GET Request
+    fetchDB();
 
-//POST Fetch
-function createDog(object){
-    fetch("http://localhost:3000/dogs", {
-        method: "POST", 
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(object)
-        })
-        .then(res => res.json())
-        .then(newData => renderDogCard(newData));
-        
-    }
+    //Creating a Submit Button
+    const form = document.querySelector("form");
+    const btn = document.createElement("button");
+    btn.textContent = "Add doggo";
+    form.append(btn);
+
+
+    //Adding eventListener to Submit button 
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log(e);
+
+    // create dog object 
+    const newName = e.target[0].value;
+    const newDesc = e.target[1].value;
+    const newLocation = e.target[2].value;
+    const newPrize = e.target[3].value;
+    const newImage = e.target[4].value;
+    
+    const newDogObj = {
+        name: `${newName}`,
+        description: `${newDesc}`,
+        location: `${newLocation}`,
+        prize: `${newPrize}`,
+        image: `${newImage}`
+        }
+    
+    //passes newDogObj as an argument into the create dog function
+    createDog(newDogObj);
+
+    //this resets the submit input values after submitting.
+    form.reset();
+
+
+    })
+    
+})
 
 //DELETE Fetch
 
