@@ -6,6 +6,41 @@
       "location": "Fairfax",
       "prize": "4",
       "image": ""
+    },
+    {
+      "name": "Zoey",
+      "description": "Caught a bird",
+      "location": "Manssass",
+      "prize": "5",
+      "image": ""
+    },
+    {
+      "name": "Ari",
+      "description": "Ate a bug",
+      "location": "Ashburn",
+      "prize": "1",
+      "image": ""
+    },
+    {
+      "name": "Mango",
+      "description": "Barked at a person",
+      "location": "Centreville",
+      "prize": "4",
+      "image": ""
+    },
+    {
+      "name": "Louie",
+      "description": "Ran into the bushes",
+      "location": "Vienna",
+      "prize": "7",
+      "image": ""
+    },
+    {
+      "name": "Benny",
+      "description": "Peed on the floor",
+      "location": "Springfield",
+      "prize": "4",
+      "image": ""
     }
   ]
 }
