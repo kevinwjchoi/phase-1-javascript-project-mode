@@ -30,6 +30,7 @@ const submitBtn = document.createElement('button');
 submitBtn.textContent = "Add a doggo";
 form.appendChild(submitBtn);
 
+
 })
 //GET Fetch
 
@@ -68,7 +69,20 @@ function renderDogs(dog){
 
 }
 
-
+//POST Fetch
+function createDog(object){
+    fetch("http://localhost:3000/dogs", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(object)
+        })
+        .then(res => res.json())
+        .then(newData => renderDogCard(newData));
+        
+    }
 
 //DELETE Fetch
 
