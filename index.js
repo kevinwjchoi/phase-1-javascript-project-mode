@@ -1,4 +1,8 @@
- //GET Fetch
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("works");
+    fetchDogs();
+})
+//GET Fetch
 
 
 
