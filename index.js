@@ -31,6 +31,10 @@ submitBtn.textContent = "Add a doggo";
 form.appendChild(submitBtn);
 
 
+//passes newDogObj as an argument into the create dog function
+createDog(newDogObj);
+
+
 })
 //GET Fetch
 
