@@ -13,5 +13,7 @@
 body {
     background-image: url("/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/wantedposter.png");
     background-color: #cccccc;
+    background-size: 900px 1000px;
     background-position: center;
+    background-repeat: no-repeat;
 }
