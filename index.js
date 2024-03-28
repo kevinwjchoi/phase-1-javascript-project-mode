@@ -56,7 +56,7 @@ function renderDogCard(dog){
 
     //Adding mouseover EventListener 
     dogImg.addEventListener("mouseover", () => {
-        setTimeout(showPrize(dog),3000);
+        setTimeout(showPrize(dog), 1000);
     } )
 
     //showPrice Callback function

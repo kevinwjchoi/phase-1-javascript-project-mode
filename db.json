@@ -47,6 +47,14 @@
       "location": "Springfield",
       "prize": "4",
       "image": "/Users/kevinwjchoi/Development/se-prep/phase-1/phase-1-javascript-project-mode/images/benny.png"
+    },
+    {
+      "id": "401b",
+      "name": "KEvin",
+      "description": "ate a cookie",
+      "location": "chantilly",
+      "prize": "41",
+      "image": "https://www.sheknows.com/wp-content/uploads/2018/08/001_Random_dog_behaviors_r74gzi.jpeg"
     }
   ]
 }
