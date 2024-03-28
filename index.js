@@ -52,12 +52,19 @@ function renderDogCard(dog){
     div.appendChild(dogImg);
     div.appendChild(p);
     div.appendChild(p1);
+    
 
     //Adding mouseover EventListener 
     dogImg.addEventListener("mouseover", () => {
-        setTimeout(showPrice(dog),3000)
+        setTimeout(showPrize(dog),3000);
     } )
 
+    //showPrice Callback function
+    function showPrize(){
+        const dogPrize = dog.prize;
+        alert("Prize is $" + dogPrize + "USD!");
+        
+    }
 
     //Adding "Click" eventListener 
     foundBtn.addEventListener("click", () => {
