@@ -53,6 +53,11 @@ function renderDogCard(dog){
     div.appendChild(p);
     div.appendChild(p1);
 
+    //Adding mouseover EventListener 
+    dogImg.addEventListener("mouseover", () => {
+        setTimeout(showPrice(dog),3000)
+    } )
+
 
     //Adding "Click" eventListener 
     foundBtn.addEventListener("click", () => {
@@ -133,5 +138,5 @@ function deleteDB(id){
     .then((dog) => console.log(dog))
 }
 
-//Mouseover EventListener 
+
 
